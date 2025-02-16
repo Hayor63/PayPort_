@@ -22,7 +22,7 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: "http://localhost:9000",
+      url: "https://payport-f7rg.onrender.com",
       description: "Development server",
     },
   ],
@@ -73,7 +73,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use(deserialize);
 app.use("/api/v1", router);
 
-app.listen(port, () => {
+app.listen(port,"0.0.0.0", () => {
   console.log(`listening on port ${port}`);
   connect();
 });
