@@ -8,11 +8,12 @@ import morgan from "morgan";
 import connect from "./database/connection";
 import deserialize from "./middleware/deserializeUser";
 import router from "./route/v1"
+import config from "../config/default";
 
 
 const app = express();
 
-const port = 9000;
+const port = config.port;
 const swaggerDefinition = {
   openapi: "3.0.0",
   info: {

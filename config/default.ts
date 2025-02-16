@@ -1,5 +1,5 @@
 export default {
-    port: process.env.PORT,
+  port: Number(process.env.PORT) || 9000,
     dbURI:
       process.env.NODE_ENV === "development"
         ? process.env.MONGODB_URL
